@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Free Football Quizzes | Quiz Goal</title>
+<meta name="description" content="Play free football quizzes: Premier League, Champions League, World Cup, famous players and football history. 10 questions, instant answers, no sign-up.">
+<meta property="og:title" content="Free Football Quizzes | Quiz Goal">
+<meta property="og:description" content="Play free football quizzes: Premier League, Champions League, World Cup, famous players and football history. 10 questions, instant answers, no sign-up.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://quiz-goal.vercel.app/index.html">
+<link rel="canonical" href="https://quiz-goal.vercel.app/index.html">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+<header>
+  <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="siteMenu" aria-label="Menu">&#9776;</button>
+  <a href="index.html">&#9917; Quiz Goal</a>
+  <nav class="header-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+  </nav>
+  <nav class="site-menu hidden" id="siteMenu" aria-label="Categories">
+    <a href="index.html">All Quizzes</a>
+    <a href="index.html?category=premier-league">Premier League</a><a href="index.html?category=champions-league">Champions League</a><a href="index.html?category=world-cup">World Cup</a><a href="index.html?category=famous-players">Famous Players</a><a href="index.html?category=football-history">Football History</a><a href="index.html?category=clubs-records">Clubs and Records</a>
+  </nav>
+</header>
+<main>
+  <h1>Test your football knowledge. No sign-up, no download.</h1>
+  <p>Quiz Goal is a free football quiz website. Every quiz has 10 questions, instant answers and a score out of 10. New quizzes are added regularly.</p>
+
+  <div class="card" style="border-width:3px">
+    <div class="card-top pink" aria-hidden="true"></div>
+    <p><span class="tag">Today's quiz</span> <span class="tag">Premier League</span></p>
+    <h2 style="margin-top:6px">Premier League Legends Quiz</h2>
+    <p>10 questions on the Premier League: its first season, its record scorers and its Invincibles.</p>
+    <p><a class="btn" href="premier-league-legends.html">Play today's quiz</a></p>
+  </div>
+
+  <h2>Categories</h2>
+  <div class="games-grid">
+    <a class="card" style="text-decoration:none;color:#000;margin:0" href="index.html?category=premier-league"><div class="card-top pink" aria-hidden="true"></div><h2 style="margin-top:6px">Premier League</h2><p>1 quiz</p><p class="muted">Tap to see the Premier League quizzes.</p></a>
+    <a class="card" style="text-decoration:none;color:#000;margin:0" href="index.html?category=champions-league"><div class="card-top teal" aria-hidden="true"></div><h2 style="margin-top:6px">Champions League</h2><p>1 quiz</p><p class="muted">Tap to see the Champions League quizzes.</p></a>
+    <a class="card" style="text-decoration:none;color:#000;margin:0" href="index.html?category=world-cup"><div class="card-top yellow" aria-hidden="true"></div><h2 style="margin-top:6px">World Cup</h2><p>1 quiz</p><p class="muted">Tap to see the World Cup quizzes.</p></a>
+    <a class="card" style="text-decoration:none;color:#000;margin:0" href="index.html?category=famous-players"><div class="card-top pink" aria-hidden="true"></div><h2 style="margin-top:6px">Famous Players</h2><p>1 quiz</p><p class="muted">Tap to see the Famous Players quizzes.</p></a>
+    <a class="card" style="text-decoration:none;color:#000;margin:0" href="index.html?category=football-history"><div class="card-top teal" aria-hidden="true"></div><h2 style="margin-top:6px">Football History</h2><p>1 quiz</p><p class="muted">Tap to see the Football History quizzes.</p></a>
+    <div class="card" style="margin:0"><div class="card-top yellow" aria-hidden="true"></div><h2 style="margin-top:6px">Clubs and Records</h2><p>First quiz coming in Phase 2.</p><p class="muted">No quiz here yet - we only list quizzes that are finished and playable.</p></div>
+  </div>
+
+  <h2>Latest quizzes</h2>
+  <p class="muted">Tap a quiz to see its details. Filter by category:</p>
+  <div class="filters-row">
+  <nav class="filters" aria-label="Filter quizzes by category">
+    <button type="button" class="filter-btn active" data-filter="all">All Quizzes</button>
+    <button type="button" class="filter-btn" data-filter="premier-league">Premier League</button><button type="button" class="filter-btn" data-filter="champions-league">Champions League</button><button type="button" class="filter-btn" data-filter="world-cup">World Cup</button><button type="button" class="filter-btn" data-filter="famous-players">Famous Players</button><button type="button" class="filter-btn" data-filter="football-history">Football History</button><button type="button" class="filter-btn" data-filter="clubs-records">Clubs and Records</button>
+  </nav>
+  </div>
+  <p id="filter-note" class="muted" aria-live="polite">Showing all quizzes.</p>
+  <div class="games-grid" id="quizGrid">
+  <section class="card game-card" data-category="premier-league" tabindex="0" aria-label="Premier League Legends Quiz">
+    <div class="card-top pink" aria-hidden="true"></div>
+    <div class="thumb-wrap">
+      <div class="thumb"><img src="premier-league-thumb.svg" alt="Premier League Legends Quiz thumbnail" loading="lazy"></div>
+      <div class="card-info">
+        <p><span class="tag">Premier League</span> <span class="tag">10 questions</span></p>
+        <p>10 questions on the Premier League: its first season, its record scorers and its Invincibles.</p>
+        <p><a class="btn" href="premier-league-legends.html">Play Premier League Legends Quiz</a></p>
+        <p class="muted">How to play: tap an answer. You get instant feedback, then your score out of 10 at the end.</p>
+      </div>
+    </div>
+    <h2>Premier League Legends Quiz</h2>
+  </section>
+  <section class="card game-card" data-category="champions-league" tabindex="0" aria-label="Champions League Glory Quiz">
+    <div class="card-top teal" aria-hidden="true"></div>
+    <div class="thumb-wrap">
+      <div class="thumb"><img src="champions-league-thumb.svg" alt="Champions League Glory Quiz thumbnail" loading="lazy"></div>
+      <div class="card-info">
+        <p><span class="tag">Champions League</span> <span class="tag">10 questions</span></p>
+        <p>10 questions on the European Cup and Champions League: record winners, record scorers and the famous trophy.</p>
+        <p><a class="btn" href="champions-league-glory.html">Play Champions League Glory Quiz</a></p>
+        <p class="muted">How to play: tap an answer. You get instant feedback, then your score out of 10 at the end.</p>
+      </div>
+    </div>
+    <h2>Champions League Glory Quiz</h2>
+  </section>
+  <section class="card game-card" data-category="world-cup" tabindex="0" aria-label="World Cup History Quiz">
+    <div class="card-top yellow" aria-hidden="true"></div>
+    <div class="thumb-wrap">
+      <div class="thumb"><img src="world-cup-thumb.svg" alt="World Cup History Quiz thumbnail" loading="lazy"></div>
+      <div class="card-info">
+        <p><span class="tag">World Cup</span> <span class="tag">10 questions</span></p>
+        <p>10 questions on the World Cup: first winners, record scorers and the only three-time winner.</p>
+        <p><a class="btn" href="world-cup-history.html">Play World Cup History Quiz</a></p>
+        <p class="muted">How to play: tap an answer. You get instant feedback, then your score out of 10 at the end.</p>
+      </div>
+    </div>
+    <h2>World Cup History Quiz</h2>
+  </section>
+  <section class="card game-card" data-category="famous-players" tabindex="0" aria-label="Football Legends Quiz">
+    <div class="card-top pink" aria-hidden="true"></div>
+    <div class="thumb-wrap">
+      <div class="thumb"><img src="football-legends-thumb.svg" alt="Football Legends Quiz thumbnail" loading="lazy"></div>
+      <div class="card-info">
+        <p><span class="tag">Famous Players</span> <span class="tag">10 questions</span></p>
+        <p>10 questions on football's greatest players: Ballon d'Or winners, record scorers and famous moments.</p>
+        <p><a class="btn" href="football-legends.html">Play Football Legends Quiz</a></p>
+        <p class="muted">How to play: tap an answer. You get instant feedback, then your score out of 10 at the end.</p>
+      </div>
+    </div>
+    <h2>Football Legends Quiz</h2>
+  </section>
+  <section class="card game-card" data-category="football-history" tabindex="0" aria-label="Football History Quiz">
+    <div class="card-top teal" aria-hidden="true"></div>
+    <div class="thumb-wrap">
+      <div class="thumb"><img src="football-history-thumb.svg" alt="Football History Quiz thumbnail" loading="lazy"></div>
+      <div class="card-info">
+        <p><span class="tag">Football History</span> <span class="tag">10 questions</span></p>
+        <p>10 questions on the history of football: the first clubs, the first matches and the rules that changed the game.</p>
+        <p><a class="btn" href="football-history.html">Play Football History Quiz</a></p>
+        <p class="muted">How to play: tap an answer. You get instant feedback, then your score out of 10 at the end.</p>
+      </div>
+    </div>
+    <h2>Football History Quiz</h2>
+  </section>
+  </div>
+<script>
+(function () {
+  var grid = document.getElementById("quizGrid");
+  var note = document.getElementById("filter-note");
+  var btns = document.querySelectorAll(".filter-btn");
+  function setFilter(cat) {
+    btns.forEach(function (b) { b.classList.toggle("active", b.getAttribute("data-filter") === cat); });
+    var shown = 0;
+    grid.querySelectorAll(".game-card").forEach(function (card) {
+      var show = cat === "all" || card.getAttribute("data-category") === cat;
+      card.style.display = show ? "" : "none";
+      if (show) shown++;
+    });
+    note.textContent = cat === "all" ? "Showing all quizzes." : "Showing " + shown + " quiz(zes) in this category.";
+  }
+  window.qgSetFilter = setFilter;
+  btns.forEach(function (b) { b.addEventListener("click", function () { setFilter(b.getAttribute("data-filter")); }); });
+  grid.querySelectorAll(".game-card").forEach(function (card) {
+    card.addEventListener("click", function (e) { if (e.target.tagName !== "A") card.classList.toggle("show-info"); });
+  });
+  var params = new URLSearchParams(window.location.search);
+  var cat = params.get("category");
+  if (cat) setFilter(cat);
+})();
+</script>
+</main>
+<footer><a href="about.html">About</a> &middot; <a href="contact.html">Contact</a> &middot; <a href="privacy.html">Privacy Policy</a> &middot; <a href="terms.html">Terms</a></footer><script src="menu.js"></script>
+</body>
+</html>

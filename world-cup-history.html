@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>World Cup History Quiz | Quiz Goal</title>
+<meta name="description" content="10 questions on the World Cup: first winners, record scorers and the only three-time winner.">
+<meta property="og:title" content="World Cup History Quiz | Quiz Goal">
+<meta property="og:description" content="10 questions on the World Cup: first winners, record scorers and the only three-time winner.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://quiz-goal.vercel.app/world-cup-history.html">
+<link rel="canonical" href="https://quiz-goal.vercel.app/world-cup-history.html">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+<header>
+  <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="siteMenu" aria-label="Menu">&#9776;</button>
+  <a href="index.html">&#9917; Quiz Goal</a>
+  <nav class="header-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+  </nav>
+  <nav class="site-menu hidden" id="siteMenu" aria-label="Categories">
+    <a href="index.html">All Quizzes</a>
+    <a href="index.html?category=premier-league">Premier League</a><a href="index.html?category=champions-league">Champions League</a><a href="index.html?category=world-cup">World Cup</a><a href="index.html?category=famous-players">Famous Players</a><a href="index.html?category=football-history">Football History</a><a href="index.html?category=clubs-records">Clubs and Records</a>
+  </nav>
+</header>
+<main>
+  <p><span class="tag">World Cup</span> <span class="tag">10 questions</span></p>
+  <h1>World Cup History Quiz</h1>
+  <p>10 questions on the World Cup: first winners, record scorers and the only three-time winner.</p>
+  <div class="hud">
+    <span>Score: <strong id="score">0</strong></span>
+    <span>Question: <strong id="qNum">1 / 10</strong></span>
+    <span>Best: <strong id="best">0 / 10</strong></span>
+  </div>
+  <div id="quizBox">
+  <div class="card" style="text-align:center">
+    <p id="status" class="fact" aria-live="polite">Pick an answer to begin!</p>
+    <h2 id="qText" style="margin:12px 0 18px">Loading question...</h2>
+    <div id="answers" class="answer-grid"></div>
+    <p style="margin-top:18px">
+      <button class="btn small secondary" id="nextBtn" type="button" disabled>Next question</button>
+      <button class="btn small secondary" id="restartBtn" type="button">Restart</button>
+    </p>
+  </div>
+  <p class="muted">Tap or click an answer, or press 1 to 4 on your keyboard. Your best score is saved in your own browser only.</p>
+  </div>
+  <div id="resultBox" class="card result-box hidden" style="display:none">
+    <h2>Your score</h2>
+    <p class="result-score" id="finalScore">0 / 10</p>
+    <p id="finalMsg"></p>
+    <p><button class="btn" id="shareBtn" type="button">Share my score</button></p>
+    <p><a class="btn secondary" href="football-legends.html">Next quiz: Football Legends Quiz</a></p>
+    <p><a href="index.html">Back to all quizzes</a></p>
+  </div>
+  <p><a href="index.html">&larr; Back to all quizzes</a></p>
+<script>
+window.QUIZ_DATA = {"slug": "world-cup-history", "title": "World Cup History Quiz", "questions": [{"q": "Which country hosted and won the first World Cup in 1930?", "a": ["Argentina", "Brazil", "Italy", "Uruguay"], "c": 3, "fact": "Uruguay hosted and won the first World Cup in 1930."}, {"q": "Which country has won the most World Cups?", "a": ["Argentina", "Brazil", "Germany", "Italy"], "c": 1, "fact": "Brazil have won the World Cup five times, more than any other country."}, {"q": "How many World Cups has Brazil won?", "a": ["3", "4", "5", "6"], "c": 2, "fact": "Brazil won in 1958, 1962, 1970, 1994 and 2002."}, {"q": "Who is the all-time top scorer at the World Cup finals?", "a": ["Gerd Muller", "Miroslav Klose", "Pele", "Ronaldo Nazario"], "c": 1, "fact": "Miroslav Klose scored 16 World Cup goals."}, {"q": "How many World Cup goals did Miroslav Klose score?", "a": ["14", "15", "16", "17"], "c": 2, "fact": "Klose scored 16 goals across four World Cups."}, {"q": "Who scored the most goals in a single World Cup, 13 in 1958?", "a": ["Gerd Muller", "Just Fontaine", "Pele", "Sandor Kocsis"], "c": 1, "fact": "Just Fontaine scored 13 goals for France at the 1958 World Cup."}, {"q": "Who is the only player to win three World Cups?", "a": ["Diego Maradona", "Franz Beckenbauer", "Pele", "Zinedine Zidane"], "c": 2, "fact": "Pele won the World Cup in 1958, 1962 and 1970."}, {"q": "How often is the World Cup held?", "a": ["Every 2 years", "Every 3 years", "Every 4 years", "Every 5 years"], "c": 2, "fact": "The World Cup is held every four years."}, {"q": "Which country hosted the 2022 World Cup?", "a": ["Brazil", "Qatar", "Russia", "South Africa"], "c": 1, "fact": "Qatar hosted the 2022 World Cup."}, {"q": "Which three countries host the 2026 World Cup?", "a": ["Brazil, Argentina and Chile", "Canada, Mexico and the USA", "England, Scotland and Wales", "Spain, Portugal and Morocco"], "c": 1, "fact": "The 2026 World Cup is hosted by Canada, Mexico and the USA."}]};
+</script>
+<script src="quiz.js"></script>
+</main>
+<footer><a href="about.html">About</a> &middot; <a href="contact.html">Contact</a> &middot; <a href="privacy.html">Privacy Policy</a> &middot; <a href="terms.html">Terms</a></footer><script src="menu.js"></script>
+</body>
+</html>

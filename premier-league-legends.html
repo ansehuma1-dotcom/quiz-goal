@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Premier League Legends Quiz | Quiz Goal</title>
+<meta name="description" content="10 questions on the Premier League: its first season, its record scorers and its Invincibles.">
+<meta property="og:title" content="Premier League Legends Quiz | Quiz Goal">
+<meta property="og:description" content="10 questions on the Premier League: its first season, its record scorers and its Invincibles.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://quiz-goal.vercel.app/premier-league-legends.html">
+<link rel="canonical" href="https://quiz-goal.vercel.app/premier-league-legends.html">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+<header>
+  <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="siteMenu" aria-label="Menu">&#9776;</button>
+  <a href="index.html">&#9917; Quiz Goal</a>
+  <nav class="header-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+  </nav>
+  <nav class="site-menu hidden" id="siteMenu" aria-label="Categories">
+    <a href="index.html">All Quizzes</a>
+    <a href="index.html?category=premier-league">Premier League</a><a href="index.html?category=champions-league">Champions League</a><a href="index.html?category=world-cup">World Cup</a><a href="index.html?category=famous-players">Famous Players</a><a href="index.html?category=football-history">Football History</a><a href="index.html?category=clubs-records">Clubs and Records</a>
+  </nav>
+</header>
+<main>
+  <p><span class="tag">Premier League</span> <span class="tag">10 questions</span></p>
+  <h1>Premier League Legends Quiz</h1>
+  <p>10 questions on the Premier League: its first season, its record scorers and its Invincibles.</p>
+  <div class="hud">
+    <span>Score: <strong id="score">0</strong></span>
+    <span>Question: <strong id="qNum">1 / 10</strong></span>
+    <span>Best: <strong id="best">0 / 10</strong></span>
+  </div>
+  <div id="quizBox">
+  <div class="card" style="text-align:center">
+    <p id="status" class="fact" aria-live="polite">Pick an answer to begin!</p>
+    <h2 id="qText" style="margin:12px 0 18px">Loading question...</h2>
+    <div id="answers" class="answer-grid"></div>
+    <p style="margin-top:18px">
+      <button class="btn small secondary" id="nextBtn" type="button" disabled>Next question</button>
+      <button class="btn small secondary" id="restartBtn" type="button">Restart</button>
+    </p>
+  </div>
+  <p class="muted">Tap or click an answer, or press 1 to 4 on your keyboard. Your best score is saved in your own browser only.</p>
+  </div>
+  <div id="resultBox" class="card result-box hidden" style="display:none">
+    <h2>Your score</h2>
+    <p class="result-score" id="finalScore">0 / 10</p>
+    <p id="finalMsg"></p>
+    <p><button class="btn" id="shareBtn" type="button">Share my score</button></p>
+    <p><a class="btn secondary" href="champions-league-glory.html">Next quiz: Champions League Glory Quiz</a></p>
+    <p><a href="index.html">Back to all quizzes</a></p>
+  </div>
+  <p><a href="index.html">&larr; Back to all quizzes</a></p>
+<script>
+window.QUIZ_DATA = {"slug": "premier-league-legends", "title": "Premier League Legends Quiz", "questions": [{"q": "In which year did the Premier League begin?", "a": ["1990", "1992", "1995", "2000"], "c": 1, "fact": "The first Premier League season was 1992-93."}, {"q": "How many clubs play in the Premier League each season?", "a": ["18", "20", "22", "24"], "c": 1, "fact": "There are 20 clubs in the Premier League."}, {"q": "How many league games does each club play in a season?", "a": ["34", "36", "38", "40"], "c": 2, "fact": "Each club plays 38 league games: home and away against the other 19 clubs."}, {"q": "Who is the Premier League's all-time top scorer?", "a": ["Wayne Rooney", "Alan Shearer", "Harry Kane", "Thierry Henry"], "c": 1, "fact": "Alan Shearer scored 260 Premier League goals."}, {"q": "How many clubs are relegated from the Premier League each season?", "a": ["2", "3", "4", "5"], "c": 1, "fact": "The bottom three clubs are relegated to the Championship."}, {"q": "Which club has won the most Premier League titles?", "a": ["Arsenal", "Chelsea", "Liverpool", "Manchester United"], "c": 3, "fact": "Manchester United have won 13 Premier League titles."}, {"q": "Which club won the first Premier League title in 1992-93?", "a": ["Arsenal", "Blackburn Rovers", "Liverpool", "Manchester United"], "c": 3, "fact": "Manchester United won the first Premier League title in 1992-93."}, {"q": "Which team went a whole Premier League season unbeaten in 2003-04?", "a": ["Arsenal", "Chelsea", "Liverpool", "Manchester United"], "c": 0, "fact": "Arsenal's 2003-04 team are known as the Invincibles."}, {"q": "How many points does a team get for a win?", "a": ["2", "3", "4", "5"], "c": 1, "fact": "Three points for a win, one for a draw."}, {"q": "Who holds the record for most Premier League appearances?", "a": ["Frank Lampard", "Gareth Barry", "James Milner", "Ryan Giggs"], "c": 1, "fact": "Gareth Barry made 653 Premier League appearances."}]};
+</script>
+<script src="quiz.js"></script>
+</main>
+<footer><a href="about.html">About</a> &middot; <a href="contact.html">Contact</a> &middot; <a href="privacy.html">Privacy Policy</a> &middot; <a href="terms.html">Terms</a></footer><script src="menu.js"></script>
+</body>
+</html>
