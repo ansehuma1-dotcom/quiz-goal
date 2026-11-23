@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Real Madrid Records Quiz | Quiz Goal</title>
+<meta name="description" content="10 questions on Real Madrid: their titles, their stadium and their record scorer.">
+<meta property="og:title" content="Real Madrid Records Quiz | Quiz Goal">
+<meta property="og:description" content="10 questions on Real Madrid: their titles, their stadium and their record scorer.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://quiz-goal.vercel.app/real-madrid-records.html">
+<link rel="canonical" href="https://quiz-goal.vercel.app/real-madrid-records.html">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+<header>
+  <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="siteMenu" aria-label="Menu">&#9776;</button>
+  <a href="index.html">&#9917; Quiz Goal</a>
+  <nav class="header-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+  </nav>
+  <nav class="site-menu hidden" id="siteMenu" aria-label="Categories">
+    <a href="index.html">All Quizzes</a>
+    <a href="index.html?category=premier-league">Premier League</a><a href="index.html?category=champions-league">Champions League</a><a href="index.html?category=world-cup">World Cup</a><a href="index.html?category=famous-players">Famous Players</a><a href="index.html?category=football-history">Football History</a><a href="index.html?category=clubs-records">Clubs and Records</a>
+  </nav>
+</header>
+<main>
+  <p><span class="tag">Clubs and Records</span> <span class="tag">10 questions</span></p>
+  <h1>Real Madrid Records Quiz</h1>
+  <p>10 questions on Real Madrid: their titles, their stadium and their record scorer.</p>
+  <div class="hud">
+    <span>Score: <strong id="score">0</strong></span>
+    <span>Question: <strong id="qNum">1 / 10</strong></span>
+    <span>Best: <strong id="best">0 / 10</strong></span>
+  </div>
+  <div id="quizBox">
+  <div class="card" style="text-align:center">
+    <p id="status" class="fact" aria-live="polite">Pick an answer to begin!</p>
+    <h2 id="qText" style="margin:12px 0 18px">Loading question...</h2>
+    <div id="answers" class="answer-grid"></div>
+    <p style="margin-top:18px">
+      <button class="btn small secondary" id="nextBtn" type="button" disabled>Next question</button>
+      <button class="btn small secondary" id="restartBtn" type="button">Restart</button>
+    </p>
+  </div>
+  <p class="muted">Tap or click an answer, or press 1 to 4 on your keyboard. Your best score is saved in your own browser only.</p>
+  </div>
+  <div id="resultBox" class="card result-box hidden" style="display:none">
+    <h2>Your score</h2>
+    <p class="result-score" id="finalScore">0 / 10</p>
+    <p id="finalMsg"></p>
+    <p><button class="btn" id="shareBtn" type="button">Share my score</button></p>
+    <p><a class="btn secondary" href="manchester-united-records.html">Next quiz: Manchester United Records Quiz</a></p>
+    <p><a href="index.html">Back to all quizzes</a></p>
+  </div>
+  <p><a href="index.html">&larr; Back to all quizzes</a></p>
+<script>
+window.QUIZ_DATA = {"slug": "real-madrid-records", "title": "Real Madrid Records Quiz", "questions": [{"q": "How many European Cup / Champions League titles had Real Madrid won after the 2024 final?", "a": ["13", "14", "15", "16"], "c": 2, "fact": "Real Madrid won their 15th title in 2024."}, {"q": "In which year was Real Madrid founded?", "a": ["1900", "1902", "1905", "1910"], "c": 1, "fact": "Real Madrid was founded in 1902."}, {"q": "What is Real Madrid's home stadium called?", "a": ["Camp Nou", "Metropolitano", "San Siro", "Santiago Bernabeu"], "c": 3, "fact": "Real Madrid play at the Santiago Bernabeu."}, {"q": "What colour shirts does Real Madrid traditionally wear at home?", "a": ["Blue", "Red", "White", "Yellow"], "c": 2, "fact": "Real Madrid traditionally wear white shirts, hence the nickname Los Blancos."}, {"q": "Who is Real Madrid's all-time top scorer?", "a": ["Alfredo Di Stefano", "Cristiano Ronaldo", "Karim Benzema", "Raul"], "c": 1, "fact": "Cristiano Ronaldo is Real Madrid's all-time top scorer."}, {"q": "How many goals did Cristiano Ronaldo score for Real Madrid?", "a": ["400", "438", "450", "500"], "c": 2, "fact": "Cristiano Ronaldo scored 450 goals for Real Madrid."}, {"q": "Which manager led Real Madrid to three Champions Leagues in a row from 2016 to 2018?", "a": ["Carlo Ancelotti", "Jose Mourinho", "Vicente del Bosque", "Zinedine Zidane"], "c": 3, "fact": "Zinedine Zidane led Real Madrid to Champions League wins in 2016, 2017 and 2018."}, {"q": "How many La Liga titles had Real Madrid won after the 2023-24 season?", "a": ["30", "33", "36", "40"], "c": 2, "fact": "Real Madrid won their 36th La Liga title in 2024."}, {"q": "What is Real Madrid's nickname?", "a": ["Los Blancos", "Los Colchoneros", "Los Cul\u00e9s", "Los Rojiblancos"], "c": 0, "fact": "Real Madrid are known as Los Blancos, The Whites."}, {"q": "Which club did Real Madrid beat in the 2024 Champions League final?", "a": ["Bayern Munich", "Borussia Dortmund", "Liverpool", "Manchester City"], "c": 1, "fact": "Real Madrid beat Borussia Dortmund 2-0 in the 2024 final."}]};
+</script>
+<script src="quiz.js"></script>
+</main>
+<footer><a href="about.html">About</a> &middot; <a href="contact.html">Contact</a> &middot; <a href="privacy.html">Privacy Policy</a> &middot; <a href="terms.html">Terms</a></footer><script src="menu.js"></script>
+</body>
+</html>

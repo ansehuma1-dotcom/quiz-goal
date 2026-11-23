@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Football Goalkeepers Quiz | Quiz Goal</title>
+<meta name="description" content="10 questions on famous goalkeepers: World Cup winners, Ballon d'Or history and modern stars.">
+<meta property="og:title" content="Football Goalkeepers Quiz | Quiz Goal">
+<meta property="og:description" content="10 questions on famous goalkeepers: World Cup winners, Ballon d'Or history and modern stars.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://quiz-goal.vercel.app/football-goalkeepers.html">
+<link rel="canonical" href="https://quiz-goal.vercel.app/football-goalkeepers.html">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+<header>
+  <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="siteMenu" aria-label="Menu">&#9776;</button>
+  <a href="index.html">&#9917; Quiz Goal</a>
+  <nav class="header-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+  </nav>
+  <nav class="site-menu hidden" id="siteMenu" aria-label="Categories">
+    <a href="index.html">All Quizzes</a>
+    <a href="index.html?category=premier-league">Premier League</a><a href="index.html?category=champions-league">Champions League</a><a href="index.html?category=world-cup">World Cup</a><a href="index.html?category=famous-players">Famous Players</a><a href="index.html?category=football-history">Football History</a><a href="index.html?category=clubs-records">Clubs and Records</a>
+  </nav>
+</header>
+<main>
+  <p><span class="tag">Famous Players</span> <span class="tag">10 questions</span></p>
+  <h1>Football Goalkeepers Quiz</h1>
+  <p>10 questions on famous goalkeepers: World Cup winners, Ballon d'Or history and modern stars.</p>
+  <div class="hud">
+    <span>Score: <strong id="score">0</strong></span>
+    <span>Question: <strong id="qNum">1 / 10</strong></span>
+    <span>Best: <strong id="best">0 / 10</strong></span>
+  </div>
+  <div id="quizBox">
+  <div class="card" style="text-align:center">
+    <p id="status" class="fact" aria-live="polite">Pick an answer to begin!</p>
+    <h2 id="qText" style="margin:12px 0 18px">Loading question...</h2>
+    <div id="answers" class="answer-grid"></div>
+    <p style="margin-top:18px">
+      <button class="btn small secondary" id="nextBtn" type="button" disabled>Next question</button>
+      <button class="btn small secondary" id="restartBtn" type="button">Restart</button>
+    </p>
+  </div>
+  <p class="muted">Tap or click an answer, or press 1 to 4 on your keyboard. Your best score is saved in your own browser only.</p>
+  </div>
+  <div id="resultBox" class="card result-box hidden" style="display:none">
+    <h2>Your score</h2>
+    <p class="result-score" id="finalScore">0 / 10</p>
+    <p id="finalMsg"></p>
+    <p><button class="btn" id="shareBtn" type="button">Share my score</button></p>
+    <p><a class="btn secondary" href="football-rules-quiz.html">Next quiz: Football Rules Quiz</a></p>
+    <p><a href="index.html">Back to all quizzes</a></p>
+  </div>
+  <p><a href="index.html">&larr; Back to all quizzes</a></p>
+<script>
+window.QUIZ_DATA = {"slug": "football-goalkeepers", "title": "Football Goalkeepers Quiz", "questions": [{"q": "Who won the Yashin Trophy for best goalkeeper in 2024?", "a": ["Alisson Becker", "Ederson", "Emiliano Martinez", "Thibaut Courtois"], "c": 2, "fact": "Emiliano Martinez won the Yashin Trophy in 2024."}, {"q": "Which Italian goalkeeper won the 2006 World Cup?", "a": ["Angelo Peruzzi", "Gianluigi Buffon", "Gianluca Pagliuca", "Walter Zenga"], "c": 1, "fact": "Gianluigi Buffon was Italy's goalkeeper when they won the 2006 World Cup."}, {"q": "Which German goalkeeper is famous for sweeper-keeping at Bayern Munich?", "a": ["Bernd Leno", "Manuel Neuer", "Marc-Andre ter Stegen", "Oliver Kahn"], "c": 1, "fact": "Manuel Neuer is famous for sweeper-keeping at Bayern Munich."}, {"q": "Which Spanish goalkeeper captained Spain to victory at the 2010 World Cup?", "a": ["David de Gea", "Iker Casillas", "Pepe Reina", "Victor Valdes"], "c": 1, "fact": "Iker Casillas captained Spain to victory at the 2010 World Cup."}, {"q": "Who is the only goalkeeper to win the Ballon d'Or?", "a": ["Dino Zoff", "Gianluigi Buffon", "Lev Yashin", "Oliver Kahn"], "c": 2, "fact": "Lev Yashin is the only goalkeeper to win the Ballon d'Or, in 1963."}, {"q": "Which Brazilian goalkeeper plays for Liverpool?", "a": ["Alisson Becker", "Ederson", "Julio Cesar", "Marcos"], "c": 0, "fact": "Alisson Becker is Liverpool's Brazilian goalkeeper."}, {"q": "Which Brazilian goalkeeper plays for Manchester City?", "a": ["Alisson Becker", "Ederson", "Neto", "Weverton"], "c": 1, "fact": "Ederson is Manchester City's Brazilian goalkeeper."}, {"q": "Which English goalkeeper was first choice at the 2018 World Cup?", "a": ["Aaron Ramsdale", "Joe Hart", "Jordan Pickford", "Nick Pope"], "c": 2, "fact": "Jordan Pickford was England's first-choice goalkeeper at the 2018 World Cup."}, {"q": "Which Danish goalkeeper won Euro 1992?", "a": ["Kasper Schmeichel", "Peter Schmeichel", "Thomas Sorensen", "Lars Hogh"], "c": 1, "fact": "Peter Schmeichel was Denmark's goalkeeper when they won Euro 1992."}, {"q": "Who was the goalkeeper in Brazil's 2002 World Cup winning team?", "a": ["Dida", "Julio Cesar", "Marcos", "Rogerio Ceni"], "c": 2, "fact": "Marcos was Brazil's goalkeeper when they won the 2002 World Cup."}]};
+</script>
+<script src="quiz.js"></script>
+</main>
+<footer><a href="about.html">About</a> &middot; <a href="contact.html">Contact</a> &middot; <a href="privacy.html">Privacy Policy</a> &middot; <a href="terms.html">Terms</a></footer><script src="menu.js"></script>
+</body>
+</html>

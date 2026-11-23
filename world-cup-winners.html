@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>World Cup Winners Quiz | Quiz Goal</title>
+<meta name="description" content="10 questions on World Cup winners: who lifted the trophy, and when.">
+<meta property="og:title" content="World Cup Winners Quiz | Quiz Goal">
+<meta property="og:description" content="10 questions on World Cup winners: who lifted the trophy, and when.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://quiz-goal.vercel.app/world-cup-winners.html">
+<link rel="canonical" href="https://quiz-goal.vercel.app/world-cup-winners.html">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+<header>
+  <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="siteMenu" aria-label="Menu">&#9776;</button>
+  <a href="index.html">&#9917; Quiz Goal</a>
+  <nav class="header-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+  </nav>
+  <nav class="site-menu hidden" id="siteMenu" aria-label="Categories">
+    <a href="index.html">All Quizzes</a>
+    <a href="index.html?category=premier-league">Premier League</a><a href="index.html?category=champions-league">Champions League</a><a href="index.html?category=world-cup">World Cup</a><a href="index.html?category=famous-players">Famous Players</a><a href="index.html?category=football-history">Football History</a><a href="index.html?category=clubs-records">Clubs and Records</a>
+  </nav>
+</header>
+<main>
+  <p><span class="tag">World Cup</span> <span class="tag">10 questions</span></p>
+  <h1>World Cup Winners Quiz</h1>
+  <p>10 questions on World Cup winners: who lifted the trophy, and when.</p>
+  <div class="hud">
+    <span>Score: <strong id="score">0</strong></span>
+    <span>Question: <strong id="qNum">1 / 10</strong></span>
+    <span>Best: <strong id="best">0 / 10</strong></span>
+  </div>
+  <div id="quizBox">
+  <div class="card" style="text-align:center">
+    <p id="status" class="fact" aria-live="polite">Pick an answer to begin!</p>
+    <h2 id="qText" style="margin:12px 0 18px">Loading question...</h2>
+    <div id="answers" class="answer-grid"></div>
+    <p style="margin-top:18px">
+      <button class="btn small secondary" id="nextBtn" type="button" disabled>Next question</button>
+      <button class="btn small secondary" id="restartBtn" type="button">Restart</button>
+    </p>
+  </div>
+  <p class="muted">Tap or click an answer, or press 1 to 4 on your keyboard. Your best score is saved in your own browser only.</p>
+  </div>
+  <div id="resultBox" class="card result-box hidden" style="display:none">
+    <h2>Your score</h2>
+    <p class="result-score" id="finalScore">0 / 10</p>
+    <p id="finalMsg"></p>
+    <p><button class="btn" id="shareBtn" type="button">Share my score</button></p>
+    <p><a class="btn secondary" href="world-cup-goals.html">Next quiz: World Cup Goals Quiz</a></p>
+    <p><a href="index.html">Back to all quizzes</a></p>
+  </div>
+  <p><a href="index.html">&larr; Back to all quizzes</a></p>
+<script>
+window.QUIZ_DATA = {"slug": "world-cup-winners", "title": "World Cup Winners Quiz", "questions": [{"q": "Which country won the 2018 World Cup?", "a": ["Belgium", "Croatia", "England", "France"], "c": 3, "fact": "France won the 2018 World Cup in Russia."}, {"q": "Which country won the 2014 World Cup?", "a": ["Argentina", "Brazil", "Germany", "Netherlands"], "c": 2, "fact": "Germany won the 2014 World Cup in Brazil."}, {"q": "Which country won the 2010 World Cup?", "a": ["Germany", "Netherlands", "Spain", "Uruguay"], "c": 2, "fact": "Spain won the 2010 World Cup in South Africa."}, {"q": "Which country won the 2006 World Cup?", "a": ["Brazil", "France", "Germany", "Italy"], "c": 3, "fact": "Italy won the 2006 World Cup in Germany."}, {"q": "Which country won the 2002 World Cup?", "a": ["Brazil", "England", "Germany", "Turkey"], "c": 0, "fact": "Brazil won the 2002 World Cup in Korea and Japan."}, {"q": "Which country won the 1998 World Cup?", "a": ["Brazil", "Croatia", "France", "Netherlands"], "c": 2, "fact": "France won the 1998 World Cup on home soil."}, {"q": "Which country won the 1994 World Cup?", "a": ["Argentina", "Brazil", "Italy", "Sweden"], "c": 1, "fact": "Brazil won the 1994 World Cup in the USA."}, {"q": "Which country won the 1986 World Cup?", "a": ["Argentina", "England", "France", "West Germany"], "c": 0, "fact": "Argentina won the 1986 World Cup in Mexico."}, {"q": "Which country won the 1970 World Cup?", "a": ["Brazil", "England", "Italy", "Uruguay"], "c": 0, "fact": "Brazil won the 1970 World Cup in Mexico."}, {"q": "Which country won the 1966 World Cup?", "a": ["Brazil", "England", "Portugal", "West Germany"], "c": 1, "fact": "England won the 1966 World Cup at home."}]};
+</script>
+<script src="quiz.js"></script>
+</main>
+<footer><a href="about.html">About</a> &middot; <a href="contact.html">Contact</a> &middot; <a href="privacy.html">Privacy Policy</a> &middot; <a href="terms.html">Terms</a></footer><script src="menu.js"></script>
+</body>
+</html>

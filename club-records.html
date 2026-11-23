@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Club Records Quiz | Quiz Goal</title>
+<meta name="description" content="10 questions on club records around the world: the most titles, the most FA Cups and famous nicknames.">
+<meta property="og:title" content="Club Records Quiz | Quiz Goal">
+<meta property="og:description" content="10 questions on club records around the world: the most titles, the most FA Cups and famous nicknames.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://quiz-goal.vercel.app/club-records.html">
+<link rel="canonical" href="https://quiz-goal.vercel.app/club-records.html">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+<header>
+  <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="siteMenu" aria-label="Menu">&#9776;</button>
+  <a href="index.html">&#9917; Quiz Goal</a>
+  <nav class="header-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+  </nav>
+  <nav class="site-menu hidden" id="siteMenu" aria-label="Categories">
+    <a href="index.html">All Quizzes</a>
+    <a href="index.html?category=premier-league">Premier League</a><a href="index.html?category=champions-league">Champions League</a><a href="index.html?category=world-cup">World Cup</a><a href="index.html?category=famous-players">Famous Players</a><a href="index.html?category=football-history">Football History</a><a href="index.html?category=clubs-records">Clubs and Records</a>
+  </nav>
+</header>
+<main>
+  <p><span class="tag">Clubs and Records</span> <span class="tag">10 questions</span></p>
+  <h1>Club Records Quiz</h1>
+  <p>10 questions on club records around the world: the most titles, the most FA Cups and famous nicknames.</p>
+  <div class="hud">
+    <span>Score: <strong id="score">0</strong></span>
+    <span>Question: <strong id="qNum">1 / 10</strong></span>
+    <span>Best: <strong id="best">0 / 10</strong></span>
+  </div>
+  <div id="quizBox">
+  <div class="card" style="text-align:center">
+    <p id="status" class="fact" aria-live="polite">Pick an answer to begin!</p>
+    <h2 id="qText" style="margin:12px 0 18px">Loading question...</h2>
+    <div id="answers" class="answer-grid"></div>
+    <p style="margin-top:18px">
+      <button class="btn small secondary" id="nextBtn" type="button" disabled>Next question</button>
+      <button class="btn small secondary" id="restartBtn" type="button">Restart</button>
+    </p>
+  </div>
+  <p class="muted">Tap or click an answer, or press 1 to 4 on your keyboard. Your best score is saved in your own browser only.</p>
+  </div>
+  <div id="resultBox" class="card result-box hidden" style="display:none">
+    <h2>Your score</h2>
+    <p class="result-score" id="finalScore">0 / 10</p>
+    <p id="finalMsg"></p>
+    <p><button class="btn" id="shareBtn" type="button">Share my score</button></p>
+    <p><a class="btn secondary" href="premier-league-records.html">Next quiz: Premier League Records Quiz</a></p>
+    <p><a href="index.html">Back to all quizzes</a></p>
+  </div>
+  <p><a href="index.html">&larr; Back to all quizzes</a></p>
+<script>
+window.QUIZ_DATA = {"slug": "club-records", "title": "Club Records Quiz", "questions": [{"q": "Which club has won the most Champions League titles after Real Madrid?", "a": ["AC Milan", "Barcelona", "Bayern Munich", "Liverpool"], "c": 0, "fact": "AC Milan are second with seven European Cup / Champions League titles."}, {"q": "Which club has won the most FA Cups?", "a": ["Arsenal", "Chelsea", "Liverpool", "Manchester United"], "c": 0, "fact": "Arsenal have won the FA Cup more than any other club."}, {"q": "How many FA Cups has Arsenal won?", "a": ["11", "12", "13", "14"], "c": 3, "fact": "Arsenal have won 14 FA Cups."}, {"q": "Which Italian club has won the most Serie A titles?", "a": ["AC Milan", "Inter Milan", "Juventus", "Roma"], "c": 2, "fact": "Juventus have won Serie A more than any other club."}, {"q": "Which German club has won the most Bundesliga titles?", "a": ["Bayern Munich", "Borussia Dortmund", "Hamburg", "Schalke"], "c": 0, "fact": "Bayern Munich have won the Bundesliga more than any other club."}, {"q": "Which Scottish club won the European Cup in 1967, the first British club to do so?", "a": ["Aberdeen", "Celtic", "Hearts", "Rangers"], "c": 1, "fact": "Celtic won the European Cup in 1967, the first British club to do so."}, {"q": "Which club is known as the Old Lady in Italy?", "a": ["AC Milan", "Inter Milan", "Juventus", "Napoli"], "c": 2, "fact": "Juventus are known in Italy as La Vecchia Signora, the Old Lady."}, {"q": "Which club plays its home games at Anfield?", "a": ["Everton", "Leeds United", "Liverpool", "Newcastle United"], "c": 2, "fact": "Liverpool play at Anfield."}, {"q": "Which club has the nickname The Gunners?", "a": ["Arsenal", "Chelsea", "Tottenham", "West Ham"], "c": 0, "fact": "Arsenal are known as The Gunners."}, {"q": "Which club won the Champions League for the first time in 2023?", "a": ["Arsenal", "Inter Milan", "Manchester City", "Paris Saint-Germain"], "c": 2, "fact": "Manchester City won their first Champions League in 2023, beating Inter Milan 1-0."}]};
+</script>
+<script src="quiz.js"></script>
+</main>
+<footer><a href="about.html">About</a> &middot; <a href="contact.html">Contact</a> &middot; <a href="privacy.html">Privacy Policy</a> &middot; <a href="terms.html">Terms</a></footer><script src="menu.js"></script>
+</body>
+</html>

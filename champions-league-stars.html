@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Champions League Stars Quiz | Quiz Goal</title>
+<meta name="description" content="10 questions on Champions League stars: record scorers, famous goals and great captains.">
+<meta property="og:title" content="Champions League Stars Quiz | Quiz Goal">
+<meta property="og:description" content="10 questions on Champions League stars: record scorers, famous goals and great captains.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://quiz-goal.vercel.app/champions-league-stars.html">
+<link rel="canonical" href="https://quiz-goal.vercel.app/champions-league-stars.html">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+<header>
+  <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="siteMenu" aria-label="Menu">&#9776;</button>
+  <a href="index.html">&#9917; Quiz Goal</a>
+  <nav class="header-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+  </nav>
+  <nav class="site-menu hidden" id="siteMenu" aria-label="Categories">
+    <a href="index.html">All Quizzes</a>
+    <a href="index.html?category=premier-league">Premier League</a><a href="index.html?category=champions-league">Champions League</a><a href="index.html?category=world-cup">World Cup</a><a href="index.html?category=famous-players">Famous Players</a><a href="index.html?category=football-history">Football History</a><a href="index.html?category=clubs-records">Clubs and Records</a>
+  </nav>
+</header>
+<main>
+  <p><span class="tag">Champions League</span> <span class="tag">10 questions</span></p>
+  <h1>Champions League Stars Quiz</h1>
+  <p>10 questions on Champions League stars: record scorers, famous goals and great captains.</p>
+  <div class="hud">
+    <span>Score: <strong id="score">0</strong></span>
+    <span>Question: <strong id="qNum">1 / 10</strong></span>
+    <span>Best: <strong id="best">0 / 10</strong></span>
+  </div>
+  <div id="quizBox">
+  <div class="card" style="text-align:center">
+    <p id="status" class="fact" aria-live="polite">Pick an answer to begin!</p>
+    <h2 id="qText" style="margin:12px 0 18px">Loading question...</h2>
+    <div id="answers" class="answer-grid"></div>
+    <p style="margin-top:18px">
+      <button class="btn small secondary" id="nextBtn" type="button" disabled>Next question</button>
+      <button class="btn small secondary" id="restartBtn" type="button">Restart</button>
+    </p>
+  </div>
+  <p class="muted">Tap or click an answer, or press 1 to 4 on your keyboard. Your best score is saved in your own browser only.</p>
+  </div>
+  <div id="resultBox" class="card result-box hidden" style="display:none">
+    <h2>Your score</h2>
+    <p class="result-score" id="finalScore">0 / 10</p>
+    <p id="finalMsg"></p>
+    <p><button class="btn" id="shareBtn" type="button">Share my score</button></p>
+    <p><a class="btn secondary" href="world-cup-winners.html">Next quiz: World Cup Winners Quiz</a></p>
+    <p><a href="index.html">Back to all quizzes</a></p>
+  </div>
+  <p><a href="index.html">&larr; Back to all quizzes</a></p>
+<script>
+window.QUIZ_DATA = {"slug": "champions-league-stars", "title": "Champions League Stars Quiz", "questions": [{"q": "Who scored a famous overhead kick against Juventus in the Champions League in 2018?", "a": ["Gareth Bale", "Cristiano Ronaldo", "Karim Benzema", "Mario Mandzukic"], "c": 1, "fact": "Cristiano Ronaldo scored a famous overhead kick against Juventus in 2018."}, {"q": "Who scored the fastest goal in Champions League history?", "a": ["Cristiano Ronaldo", "Lionel Messi", "Roy Makaay", "Paolo Maldini"], "c": 2, "fact": "Roy Makaay scored the fastest Champions League goal, for Bayern Munich against Real Madrid in 2007."}, {"q": "Which player has made the most Champions League appearances?", "a": ["Cristiano Ronaldo", "Iker Casillas", "Lionel Messi", "Xavi"], "c": 0, "fact": "Cristiano Ronaldo has made the most Champions League appearances."}, {"q": "How many Champions League appearances did Cristiano Ronaldo make?", "a": ["170", "183", "190", "200"], "c": 1, "fact": "Cristiano Ronaldo made 183 Champions League appearances."}, {"q": "Who is the youngest scorer in Champions League history?", "a": ["Ansu Fati", "Jude Bellingham", "Kylian Mbappe", "Lamine Yamal"], "c": 0, "fact": "Ansu Fati is the youngest scorer in Champions League history, aged 17 years and 40 days."}, {"q": "Who captained Liverpool in the 2005 Champions League final in Istanbul?", "a": ["Jamie Carragher", "Michael Owen", "Steven Gerrard", "Xabi Alonso"], "c": 2, "fact": "Steven Gerrard captained Liverpool in the 2005 final."}, {"q": "Which Spanish striker scored twice for Inter Milan in the 2010 Champions League final?", "a": ["David Villa", "Diego Milito", "Fernando Torres", "Raul"], "c": 1, "fact": "Diego Milito scored both goals for Inter Milan in the 2010 final."}, {"q": "Which Welsh winger scored a famous overhead kick in the 2018 Champions League final?", "a": ["Aaron Ramsey", "Daniel James", "Gareth Bale", "Joe Allen"], "c": 2, "fact": "Gareth Bale scored a famous overhead kick in the 2018 final."}, {"q": "Which player scored a hat-trick for Real Madrid against Wolfsburg in the 2016 quarter-final?", "a": ["Cristiano Ronaldo", "Gareth Bale", "Karim Benzema", "Sergio Ramos"], "c": 0, "fact": "Cristiano Ronaldo scored a hat-trick against Wolfsburg in 2016."}, {"q": "Which club did Didier Drogba score the winning penalty for in the 2012 Champions League final?", "a": ["Arsenal", "Chelsea", "Liverpool", "Marseille"], "c": 1, "fact": "Didier Drogba scored the winning penalty for Chelsea in the 2012 final."}]};
+</script>
+<script src="quiz.js"></script>
+</main>
+<footer><a href="about.html">About</a> &middot; <a href="contact.html">Contact</a> &middot; <a href="privacy.html">Privacy Policy</a> &middot; <a href="terms.html">Terms</a></footer><script src="menu.js"></script>
+</body>
+</html>

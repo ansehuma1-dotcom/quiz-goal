@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Football Rules Quiz | Quiz Goal</title>
+<meta name="description" content="10 questions on the rules of football: players, cards, penalties and the size of the goal.">
+<meta property="og:title" content="Football Rules Quiz | Quiz Goal">
+<meta property="og:description" content="10 questions on the rules of football: players, cards, penalties and the size of the goal.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://quiz-goal.vercel.app/football-rules-quiz.html">
+<link rel="canonical" href="https://quiz-goal.vercel.app/football-rules-quiz.html">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+<header>
+  <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="siteMenu" aria-label="Menu">&#9776;</button>
+  <a href="index.html">&#9917; Quiz Goal</a>
+  <nav class="header-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+  </nav>
+  <nav class="site-menu hidden" id="siteMenu" aria-label="Categories">
+    <a href="index.html">All Quizzes</a>
+    <a href="index.html?category=premier-league">Premier League</a><a href="index.html?category=champions-league">Champions League</a><a href="index.html?category=world-cup">World Cup</a><a href="index.html?category=famous-players">Famous Players</a><a href="index.html?category=football-history">Football History</a><a href="index.html?category=clubs-records">Clubs and Records</a>
+  </nav>
+</header>
+<main>
+  <p><span class="tag">Football History</span> <span class="tag">10 questions</span></p>
+  <h1>Football Rules Quiz</h1>
+  <p>10 questions on the rules of football: players, cards, penalties and the size of the goal.</p>
+  <div class="hud">
+    <span>Score: <strong id="score">0</strong></span>
+    <span>Question: <strong id="qNum">1 / 10</strong></span>
+    <span>Best: <strong id="best">0 / 10</strong></span>
+  </div>
+  <div id="quizBox">
+  <div class="card" style="text-align:center">
+    <p id="status" class="fact" aria-live="polite">Pick an answer to begin!</p>
+    <h2 id="qText" style="margin:12px 0 18px">Loading question...</h2>
+    <div id="answers" class="answer-grid"></div>
+    <p style="margin-top:18px">
+      <button class="btn small secondary" id="nextBtn" type="button" disabled>Next question</button>
+      <button class="btn small secondary" id="restartBtn" type="button">Restart</button>
+    </p>
+  </div>
+  <p class="muted">Tap or click an answer, or press 1 to 4 on your keyboard. Your best score is saved in your own browser only.</p>
+  </div>
+  <div id="resultBox" class="card result-box hidden" style="display:none">
+    <h2>Your score</h2>
+    <p class="result-score" id="finalScore">0 / 10</p>
+    <p id="finalMsg"></p>
+    <p><button class="btn" id="shareBtn" type="button">Share my score</button></p>
+    <p><a class="btn secondary" href="football-firsts-quiz.html">Next quiz: Football Firsts Quiz</a></p>
+    <p><a href="index.html">Back to all quizzes</a></p>
+  </div>
+  <p><a href="index.html">&larr; Back to all quizzes</a></p>
+<script>
+window.QUIZ_DATA = {"slug": "football-rules-quiz", "title": "Football Rules Quiz", "questions": [{"q": "How many players from each team are on the pitch at kick-off?", "a": ["9", "10", "11", "12"], "c": 2, "fact": "Each team has 11 players on the pitch at kick-off."}, {"q": "How long is a standard football match, not counting extra time?", "a": ["60 minutes", "80 minutes", "90 minutes", "100 minutes"], "c": 2, "fact": "A standard football match lasts 90 minutes."}, {"q": "How many substitutions were allowed in most leagues before 2020?", "a": ["1", "2", "3", "5"], "c": 2, "fact": "Most leagues allowed three substitutions before 2020."}, {"q": "How many substitutions are now allowed in most top leagues?", "a": ["3", "4", "5", "7"], "c": 2, "fact": "Most top leagues now allow five substitutions."}, {"q": "What does a red card mean?", "a": ["A free kick", "A penalty", "A warning", "The player is sent off"], "c": 3, "fact": "A red card means the player is sent off and cannot be replaced."}, {"q": "What does a yellow card mean?", "a": ["A free kick", "A penalty", "A warning for the player", "The player is sent off"], "c": 2, "fact": "A yellow card is a warning, also called a caution."}, {"q": "How far is the penalty spot from the goal line?", "a": ["9 metres", "11 metres", "12 metres", "15 metres"], "c": 1, "fact": "The penalty spot is 11 metres from the goal line."}, {"q": "How wide is a football goal?", "a": ["6 metres", "7.32 metres", "8 metres", "9 metres"], "c": 1, "fact": "A football goal is 7.32 metres wide."}, {"q": "How high is the crossbar of a football goal?", "a": ["2.24 metres", "2.44 metres", "2.64 metres", "3 metres"], "c": 1, "fact": "The crossbar is 2.44 metres high."}, {"q": "In which year was the offside law changed so a player level with the second-last defender is onside?", "a": ["1970", "1986", "1990", "1998"], "c": 2, "fact": "The offside law was changed in 1990 so a player level with the second-last defender is onside."}]};
+</script>
+<script src="quiz.js"></script>
+</main>
+<footer><a href="about.html">About</a> &middot; <a href="contact.html">Contact</a> &middot; <a href="privacy.html">Privacy Policy</a> &middot; <a href="terms.html">Terms</a></footer><script src="menu.js"></script>
+</body>
+</html>

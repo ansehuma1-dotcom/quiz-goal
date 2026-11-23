@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Premier League Champions Quiz | Quiz Goal</title>
+<meta name="description" content="10 questions on Premier League champions: who won it, and when.">
+<meta property="og:title" content="Premier League Champions Quiz | Quiz Goal">
+<meta property="og:description" content="10 questions on Premier League champions: who won it, and when.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://quiz-goal.vercel.app/premier-league-champions.html">
+<link rel="canonical" href="https://quiz-goal.vercel.app/premier-league-champions.html">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+<header>
+  <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="siteMenu" aria-label="Menu">&#9776;</button>
+  <a href="index.html">&#9917; Quiz Goal</a>
+  <nav class="header-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+  </nav>
+  <nav class="site-menu hidden" id="siteMenu" aria-label="Categories">
+    <a href="index.html">All Quizzes</a>
+    <a href="index.html?category=premier-league">Premier League</a><a href="index.html?category=champions-league">Champions League</a><a href="index.html?category=world-cup">World Cup</a><a href="index.html?category=famous-players">Famous Players</a><a href="index.html?category=football-history">Football History</a><a href="index.html?category=clubs-records">Clubs and Records</a>
+  </nav>
+</header>
+<main>
+  <p><span class="tag">Premier League</span> <span class="tag">10 questions</span></p>
+  <h1>Premier League Champions Quiz</h1>
+  <p>10 questions on Premier League champions: who won it, and when.</p>
+  <div class="hud">
+    <span>Score: <strong id="score">0</strong></span>
+    <span>Question: <strong id="qNum">1 / 10</strong></span>
+    <span>Best: <strong id="best">0 / 10</strong></span>
+  </div>
+  <div id="quizBox">
+  <div class="card" style="text-align:center">
+    <p id="status" class="fact" aria-live="polite">Pick an answer to begin!</p>
+    <h2 id="qText" style="margin:12px 0 18px">Loading question...</h2>
+    <div id="answers" class="answer-grid"></div>
+    <p style="margin-top:18px">
+      <button class="btn small secondary" id="nextBtn" type="button" disabled>Next question</button>
+      <button class="btn small secondary" id="restartBtn" type="button">Restart</button>
+    </p>
+  </div>
+  <p class="muted">Tap or click an answer, or press 1 to 4 on your keyboard. Your best score is saved in your own browser only.</p>
+  </div>
+  <div id="resultBox" class="card result-box hidden" style="display:none">
+    <h2>Your score</h2>
+    <p class="result-score" id="finalScore">0 / 10</p>
+    <p id="finalMsg"></p>
+    <p><button class="btn" id="shareBtn" type="button">Share my score</button></p>
+    <p><a class="btn secondary" href="champions-league-finals.html">Next quiz: Champions League Finals Quiz</a></p>
+    <p><a href="index.html">Back to all quizzes</a></p>
+  </div>
+  <p><a href="index.html">&larr; Back to all quizzes</a></p>
+<script>
+window.QUIZ_DATA = {"slug": "premier-league-champions", "title": "Premier League Champions Quiz", "questions": [{"q": "Which club won the Premier League in 2019-20, their first Premier League title?", "a": ["Arsenal", "Chelsea", "Liverpool", "Manchester City"], "c": 2, "fact": "Liverpool won the Premier League in 2019-20, their first Premier League title."}, {"q": "Which club won the Premier League in 2023-24?", "a": ["Arsenal", "Chelsea", "Liverpool", "Manchester City"], "c": 3, "fact": "Manchester City won the Premier League in 2023-24."}, {"q": "How many Premier League titles in a row did Manchester City win from 2020-21 to 2023-24?", "a": ["2", "3", "4", "5"], "c": 2, "fact": "Manchester City won four Premier League titles in a row from 2020-21 to 2023-24."}, {"q": "Which club won the Premier League in 2012-13, Alex Ferguson's last season?", "a": ["Arsenal", "Chelsea", "Liverpool", "Manchester United"], "c": 3, "fact": "Manchester United won the Premier League in 2012-13."}, {"q": "Which club won the Premier League in 2004-05 under Jose Mourinho, their first league title in 50 years?", "a": ["Arsenal", "Chelsea", "Liverpool", "Tottenham"], "c": 1, "fact": "Chelsea won the Premier League in 2004-05, their first league title in 50 years."}, {"q": "Which club won the Premier League in 2016-17 under Antonio Conte?", "a": ["Arsenal", "Chelsea", "Liverpool", "Manchester City"], "c": 1, "fact": "Chelsea won the Premier League in 2016-17."}, {"q": "Which club won the Premier League in 2013-14?", "a": ["Arsenal", "Chelsea", "Liverpool", "Manchester City"], "c": 3, "fact": "Manchester City won the Premier League in 2013-14."}, {"q": "Which club won three Premier League titles in a row in 2007, 2008 and 2009?", "a": ["Arsenal", "Chelsea", "Liverpool", "Manchester United"], "c": 3, "fact": "Manchester United won the Premier League in 2007, 2008 and 2009."}, {"q": "Which club won the Premier League in 2020-21?", "a": ["Arsenal", "Chelsea", "Liverpool", "Manchester City"], "c": 3, "fact": "Manchester City won the Premier League in 2020-21."}, {"q": "Which of these clubs has never won the Premier League?", "a": ["Arsenal", "Chelsea", "Liverpool", "Tottenham Hotspur"], "c": 3, "fact": "Tottenham Hotspur have never won the Premier League."}]};
+</script>
+<script src="quiz.js"></script>
+</main>
+<footer><a href="about.html">About</a> &middot; <a href="contact.html">Contact</a> &middot; <a href="privacy.html">Privacy Policy</a> &middot; <a href="terms.html">Terms</a></footer><script src="menu.js"></script>
+</body>
+</html>

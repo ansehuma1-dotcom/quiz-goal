@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>World Cup Goals Quiz | Quiz Goal</title>
+<meta name="description" content="10 questions on World Cup goals: Golden Boot winners and famous final goals.">
+<meta property="og:title" content="World Cup Goals Quiz | Quiz Goal">
+<meta property="og:description" content="10 questions on World Cup goals: Golden Boot winners and famous final goals.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://quiz-goal.vercel.app/world-cup-goals.html">
+<link rel="canonical" href="https://quiz-goal.vercel.app/world-cup-goals.html">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+<header>
+  <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="siteMenu" aria-label="Menu">&#9776;</button>
+  <a href="index.html">&#9917; Quiz Goal</a>
+  <nav class="header-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+  </nav>
+  <nav class="site-menu hidden" id="siteMenu" aria-label="Categories">
+    <a href="index.html">All Quizzes</a>
+    <a href="index.html?category=premier-league">Premier League</a><a href="index.html?category=champions-league">Champions League</a><a href="index.html?category=world-cup">World Cup</a><a href="index.html?category=famous-players">Famous Players</a><a href="index.html?category=football-history">Football History</a><a href="index.html?category=clubs-records">Clubs and Records</a>
+  </nav>
+</header>
+<main>
+  <p><span class="tag">World Cup</span> <span class="tag">10 questions</span></p>
+  <h1>World Cup Goals Quiz</h1>
+  <p>10 questions on World Cup goals: Golden Boot winners and famous final goals.</p>
+  <div class="hud">
+    <span>Score: <strong id="score">0</strong></span>
+    <span>Question: <strong id="qNum">1 / 10</strong></span>
+    <span>Best: <strong id="best">0 / 10</strong></span>
+  </div>
+  <div id="quizBox">
+  <div class="card" style="text-align:center">
+    <p id="status" class="fact" aria-live="polite">Pick an answer to begin!</p>
+    <h2 id="qText" style="margin:12px 0 18px">Loading question...</h2>
+    <div id="answers" class="answer-grid"></div>
+    <p style="margin-top:18px">
+      <button class="btn small secondary" id="nextBtn" type="button" disabled>Next question</button>
+      <button class="btn small secondary" id="restartBtn" type="button">Restart</button>
+    </p>
+  </div>
+  <p class="muted">Tap or click an answer, or press 1 to 4 on your keyboard. Your best score is saved in your own browser only.</p>
+  </div>
+  <div id="resultBox" class="card result-box hidden" style="display:none">
+    <h2>Your score</h2>
+    <p class="result-score" id="finalScore">0 / 10</p>
+    <p id="finalMsg"></p>
+    <p><button class="btn" id="shareBtn" type="button">Share my score</button></p>
+    <p><a class="btn secondary" href="messi-ronaldo-quiz.html">Next quiz: Messi and Ronaldo Quiz</a></p>
+    <p><a href="index.html">Back to all quizzes</a></p>
+  </div>
+  <p><a href="index.html">&larr; Back to all quizzes</a></p>
+<script>
+window.QUIZ_DATA = {"slug": "world-cup-goals", "title": "World Cup Goals Quiz", "questions": [{"q": "Who scored the most goals at the 2022 World Cup?", "a": ["Harry Kane", "Julian Alvarez", "Kylian Mbappe", "Lionel Messi"], "c": 2, "fact": "Kylian Mbappe was top scorer at the 2022 World Cup."}, {"q": "How many goals did Kylian Mbappe score at the 2022 World Cup?", "a": ["6", "7", "8", "9"], "c": 2, "fact": "Kylian Mbappe scored eight goals at the 2022 World Cup."}, {"q": "Who was top scorer at the 2018 World Cup?", "a": ["Antoine Griezmann", "Harry Kane", "Kylian Mbappe", "Romelu Lukaku"], "c": 1, "fact": "Harry Kane was top scorer at the 2018 World Cup with six goals."}, {"q": "Who was top scorer at the 2014 World Cup?", "a": ["James Rodriguez", "Lionel Messi", "Neymar", "Thomas Muller"], "c": 0, "fact": "James Rodriguez was top scorer at the 2014 World Cup with six goals."}, {"q": "Who won the Golden Boot at the 2010 World Cup?", "a": ["David Villa", "Gonzalo Higuain", "Thomas Muller", "Wesley Sneijder"], "c": 2, "fact": "Thomas Muller won the Golden Boot at the 2010 World Cup with five goals."}, {"q": "Who scored both goals in the 2002 World Cup final?", "a": ["Rivaldo", "Ronaldinho", "Ronaldo Nazario", "Romario"], "c": 2, "fact": "Ronaldo Nazario scored both goals in the 2002 final against Germany."}, {"q": "Who scored the winning goal in the 2010 World Cup final?", "a": ["Andres Iniesta", "David Villa", "Fernando Torres", "Xavi"], "c": 0, "fact": "Andres Iniesta scored the winning goal in the 2010 final against the Netherlands."}, {"q": "Who scored the winning goal in the 2014 World Cup final?", "a": ["Mario Gotze", "Mesut Ozil", "Miroslav Klose", "Thomas Muller"], "c": 0, "fact": "Mario Gotze scored the winning goal in the 2014 final against Argentina."}, {"q": "Who scored a hat-trick in the 2022 World Cup final?", "a": ["Julian Alvarez", "Kylian Mbappe", "Lionel Messi", "Olivier Giroud"], "c": 1, "fact": "Kylian Mbappe scored a hat-trick in the 2022 final against Argentina."}, {"q": "Who scored the fastest goal in World Cup history?", "a": ["Hakan Sukur", "Pele", "Ronaldo Nazario", "Vladimir Smicer"], "c": 0, "fact": "Hakan Sukur scored the fastest World Cup goal, after 11 seconds, for Turkey in 2002."}]};
+</script>
+<script src="quiz.js"></script>
+</main>
+<footer><a href="about.html">About</a> &middot; <a href="contact.html">Contact</a> &middot; <a href="privacy.html">Privacy Policy</a> &middot; <a href="terms.html">Terms</a></footer><script src="menu.js"></script>
+</body>
+</html>
