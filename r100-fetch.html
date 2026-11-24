@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><title>R100 fetch</title></head>
+<body>
+<h1 id="status">Starting…</h1>
+<pre id="log"></pre>
+<script>
+(function () {
+  var logEl = document.getElementById("log");
+  var statusEl = document.getElementById("status");
+  function log(msg) { logEl.textContent += msg + "\n"; }
+  function setStatus(s) { statusEl.textContent = s; }
+  var ws;
+  try {
+    ws = new WebSocket("wss://ws.derivws.com/websockets/v3?app_id=1089");
+  } catch (e) {
+    setStatus("WS CONSTRUCT ERROR: " + e.message);
+    return;
+  }
+  var timer = setTimeout(function () { setStatus("WS TIMEOUT after 25s"); try { ws.close(); } catch (e) {} }, 25000);
+  ws.onopen = function () {
+    clearTimeout(timer);
+    setStatus("Connected, fetching…");
+    var START = 1759276800, END = Math.floor(Date.now() / 1000);
+    var end = END, all = {};
+    var pending = null;
+    function send(obj) {
+      return new Promise(function (res, rej) {
+        function h(ev) {
+          var m = JSON.parse(ev.data);
+          if (m.msg_type === "candles" || m.error) {
+            ws.removeEventListener("message", h);
+            if (m.error) rej(new Error(JSON.stringify(m.error))); else res(m.candles);
+          }
+        }
+        ws.addEventListener("message", h);
+        ws.send(JSON.stringify(obj));
+      });
+    }
+    (async function () {
+      try {
+        while (true) {
+          var candles = await send({ticks_history: "R_100", adjust_start_time: 1, count: 5000, end: end, granularity: 60, start: START, style: "candles"});
+          if (!candles.length) break;
+          for (var k = 0; k < candles.length; k++) all[candles[k].epoch] = candles[k];
+          var earliest = Math.min.apply(null, candles.map(function (c) { return c.epoch; }));
+          log("page got " + candles.length + " total " + Object.keys(all).length + " earliest " + new Date(earliest * 1000).toISOString());
+          if (earliest <= START + 60) break;
+          end = earliest - 1;
+        }
+        var rows = Object.values(all).sort(function (a, b) { return a.epoch - b.epoch; });
+        var csv = "epoch,open,high,low,close\n" + rows.map(function (c) { return [c.epoch, c.open, c.high, c.low, c.close].join(","); }).join("\n");
+        window.__r100csv = csv; window.__r100rows = rows.length;
+        var blob = new Blob([csv], {type: "text/csv"});
+        var a = document.createElement("a");
+        a.href = URL.createObjectURL(blob);
+        a.download = "r100_m1.csv";
+        document.body.appendChild(a); a.click(); a.remove();
+        setStatus("DOWNLOAD STARTED rows: " + rows.length + " first: " + new Date(rows[0].epoch * 1000).toISOString() + " last: " + new Date(rows[rows.length - 1].epoch * 1000).toISOString());
+        log("DOWNLOAD STARTED rows: " + rows.length);
+      } catch (e) {
+        setStatus("FETCH ERROR: " + e.message);
+        log("ERROR: " + e.message);
+      }
+    })();
+  };
+  ws.onerror = function () { setStatus("WS ERROR (connection failed)"); log("WS onerror"); };
+  ws.onclose = function (ev) { log("WS closed code " + ev.code); };
+})();
+</script>
+</body>
+</html>
